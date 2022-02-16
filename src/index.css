@@ -1,13 +1,77 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.squares {
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  outline: none;
+  background-color: rgb(240, 240, 240);
+  height: 60px;
+  min-width: 60px;
+  padding: 10px;
+  margin: 5px !important;
+  border-radius: 8px;
+}
+.board {
+  display: grid;
+  justify-content: center;
+}
+.board_inside {
+  border: 6px solid gainsboro;
+  margin: auto;
+  overflow: auto;
+  max-width: 95vw;
+  border-radius: 16px;
+}
+.d-flex {
+  display: flex;
+}
+.x {
+  color: red;
+}
+.o {
+  color: green;
+}
+.App h1 {
+  color: blueviolet;
+}
+.App input,
+.App button {
+  zoom: 2;
+}
+input[type="radio"] {
+  align-items: center;
+}
+input[type="number"] {
+  width: 10vw;
+  align-items: center;
+}
+.radio-label {
+  display: inline-block;
+  vertical-align: super;
+  font-size: 20px;
+  margin-right: 3%;
+}
+.radio-input {
+  display: inline-block;
+  vertical-align: top;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }
