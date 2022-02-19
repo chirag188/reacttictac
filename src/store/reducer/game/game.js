@@ -42,7 +42,8 @@ const checkWinner = (arr, xO, row, col, boardWidth) => {
   if (checkRow(arr, row, xO, boardWidth)) return true;
   if (checkCol(arr, col, xO, boardWidth)) return true;
   if (row === col) return checkRightDig(arr, xO, boardWidth);
-  if ((row + col === boardWidth - 1, boardWidth)) return checkLeftDig(arr, xO);
+  if ((row + col === boardWidth - 1, boardWidth))
+    return checkLeftDig(arr, xO, boardWidth);
   return false;
 };
 
