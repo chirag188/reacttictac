@@ -13,7 +13,7 @@ function Game({ boardWidth }) {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    const socket = io("http://localhost:8000", {
+    const socket = io("https://tictacreacttask.herokuapp.com", {
       transports: ["websocket", "polling", "flashsocket"],
     });
     setSocketIo(socket);

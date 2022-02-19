@@ -10,7 +10,7 @@ function App() {
     window.sessionStorage.getItem("player") ?? null
   );
   useEffect(() => {
-    const socket = io("http://localhost:8000", {
+    const socket = io("https://tictacreacttask.herokuapp.com", {
       transports: ["websocket", "polling", "flashsocket"],
     });
     setSocketIo(socket);
@@ -52,7 +52,7 @@ function App() {
           onChange={(event) => onChangePlayer(event.target.value)}
           checked={window.sessionStorage.getItem("player") === "x"}
         />
-        <label class="radio-label">X</label>
+        <label className="radio-label">X</label>
         <input
           type={"radio"}
           name="player"
@@ -61,7 +61,7 @@ function App() {
           onChange={(event) => onChangePlayer(event.target.value)}
           checked={window.sessionStorage.getItem("player") === "o"}
         />
-        <label class="radio-label">O</label>
+        <label className="radio-label">O</label>
       </div>
       <Game boardWidth={boardWidth}></Game>
     </div>
